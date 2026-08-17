@@ -1,10 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ink of Petals | Beauty, Elegance & You</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #faf8fa;
+            color: #241526;
+        }
+
+        header {
+            background: #241026;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2a102d, #5b315c, #f8f4f8);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 10vw, 90px);
+            letter-spacing: 8px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            border: 1px solid #d8b86a;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d8b86a;
+            color: #241026;
+        }
+
+        section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .gold {
+            color: #b38a35;
+        }
+
+        .intro {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #5e5360;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .category {
+            background: white;
+            padding: 45px 20px;
+            border: 1px solid #eadfea;
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(40, 15, 45, 0.12);
+        }
+
+        .category h3 {
+            margin-bottom: 10px;
+        }
+
+        .coming {
+            background: #241026;
+            color: white;
+        }
+
+        .coming p {
+            max-width: 600px;
+            margin: 15px auto 30px;
+            line-height: 1.8;
+            color: #e8dfe9;
+        }
+
+        .about {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.9;
+            color: #5e5360;
+        }
+
+        footer {
+            background: #160a18;
+            color: #d8cbd9;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                letter-spacing: 4px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello! 👋</h1>
-    <p>Welcome to my first website.</p>
+
+<header>
+    <div class="brand">INK OF PETALS</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>INK OF PETALS</h1>
+
+    <p>Beauty, Elegance & You</p>
+
+    <a href="#shop" class="button">EXPLORE</a>
+</section>
+
+<section id="shop">
+    <h2 class="section-title">Coming <span class="gold">Soon</span></h2>
+
+    <p class="intro">
+        A beautiful collection is blooming.
+        Discover beauty, style and little luxuries created
+        to help you express yourself.
+    </p>
+
+    <div class="categories">
+
+        <div class="category">
+            <h3>Makeup</h3>
+            <p>Coming Soon</p>
+        </div>
+
+        <div class="category">
+            <h3>Skincare</h3>
+            <p>Coming Soon</p>
+        </div>
+
+        <div class="category">
+            <h3>Fashion</h3>
+            <p>Coming Soon</p>
+        </div>
+
+        <div class="category">
+            <h3>Accessories</h3>
+            <p>Coming Soon</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="coming">
+    <h2 class="section-title">Something Beautiful Is Blooming</h2>
+
+    <p>
+        Ink of Petals is preparing to bring you carefully selected
+        beauty, fashion and lifestyle pieces.
+        Stay close. We're just getting started.
+    </p>
+
+    <a href="#about" class="button">OUR STORY</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About <span class="gold">Ink of Petals</span></h2>
+
+    <p class="about">
+        Ink of Petals is a growing beauty and lifestyle brand
+        built around self-expression, elegance and individuality.
+        From beauty essentials to fashion and accessories,
+        our goal is to create a space where everyone can find
+        something that feels uniquely them.
+    </p>
+</section>
+
+<footer>
+    © 2026 Ink of Petals. Beauty, Elegance & You.
+</footer>
+
 </body>
-</html>
+    </html>
